@@ -16,13 +16,28 @@ namespace csharp_shop_3
         private string source;
 
         //CONSTRUCTOR
-        public Water(string name, string description, float price, string categoryName, string brand, float maxCapacity, float initialLiters, float pH, string source, int tax = 22) : base(name, description, price, categoryName, tax)
-        {
-            this.brand = brand;
-            this.maxCapacity = maxCapacity;
-            this.litersInTheBottle = initialLiters;
-            this.pH = pH;
-            this.source = source;
+        public Water(string name, string description, float price,
+            string categoryName, string brand, float maxCapacity, 
+            float initialLiters, float pH, string source, 
+            int tax = 22) : base(name, description, price, categoryName, tax)
+        {   
+            // se il ph è negativo oppure maggiore di dieci mando un messaggio di errore
+            if(pH < 0 || pH > 10)
+            {
+                throw new Exception("il ph non va bene, ma stavolta è un'eccezione");
+              //Console.WriteLine("il ph non va bene");
+            }
+            // altrimenti setto il ph
+            
+                this.pH= pH;
+                this.brand = brand;
+                this.maxCapacity = maxCapacity;
+                this.litersInTheBottle = initialLiters;
+                this.source = source;
+           
+            
+            
+           
         }
 
 

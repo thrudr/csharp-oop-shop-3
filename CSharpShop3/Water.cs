@@ -100,12 +100,12 @@ namespace csharp_shop_3
         public override string ToString()
         {
             string infoProduct =
-            $"Nome: {this.GetName()} \n" +
-            $"Marca: {this.brand} \n" +
-            $"pH: {this.pH} \n" +
-            $"Descrizione: {this.GetDescription()} \n" +
-            $"Codice: {this.code} \n" +
-            $"Prezzo: {this.GetPrice()} \n" +
+            $"Nome: \t\t{this.GetName()} \n" +
+            $"Marca: \t\t{this.brand} \n" +
+            $"pH: \t\t{this.pH} \n" +
+            $"Descrizione: \t{this.GetDescription()} \n" +
+            $"Codice: \t{this.code} \n" +
+            $"Prezzo: \t{this.GetPrice()} \n" +
             $"Categoria: \n";
 
             return infoProduct;

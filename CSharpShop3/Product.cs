@@ -19,40 +19,13 @@ namespace csharp_shop_3
         private protected Category category;
 
         //GETTERS
-        public static int GetTotalGeneratedProducts()
-        {
-            return numberOfGeneratedProduct;
-        }
-
-        public string GetCode()
-        {
-            return this.code;
-        }
-
-        public string GetName()
-        {
-            return this.name;
-        }
-
-        public string GetDescription()
-        {
-            return this.description;
-        }
-
-        public float GetPrice()
-        {
-            return this.price;
-        }
-
-        public int GetTax()
-        {
-            return this.tax;
-        }
-
-        public Category GetCategory()
-        {
-            return this.category;
-        }
+        public static int GetTotalGeneratedProducts() { return numberOfGeneratedProduct; }
+        public string GetCode() { return this.code; }
+        public string GetName() { return this.name; }
+        public string GetDescription() { return this.description; }
+        public float GetPrice() { return this.price; }
+        public int GetTax() { return this.tax; }
+        public Category GetCategory() { return this.category; }
 
         //SETTERS
         public void SetName(string newName)
@@ -134,12 +107,11 @@ namespace csharp_shop_3
         public override string ToString()
         {
             string infoProduct =
-            $"Nome: {this.name} \n" +
-            $"Descrizione: {this.description} \n" +
-            $"Codice: {this.code} \n" +
-            $"Prezzo: {this.price} \n" +
-            $"Categoria: \n" +
-            $"{category.ToString()}";
+            $"Nome: \t\t{this.name} \n" +
+            $"Descrizione: \t{this.description} \n" +
+            $"Codice: \t{this.code} \n" +
+            $"Prezzo: \t{this.price} \n" +
+            $"Categoria: \t" + category.ToString();
 
             return infoProduct;
         }
